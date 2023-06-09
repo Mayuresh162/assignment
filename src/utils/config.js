@@ -78,7 +78,7 @@
 
 export const GET_RECIPE = 'https://master-7rqtwti-yj2le3kr2yhmu.uk-1.platformsh.site/yumazoo/recipes'
 export const ADD_RECIPE = 'https://master-7rqtwti-yj2le3kr2yhmu.uk-1.platformsh.site/yumazoo/recipes'
-export const GET_RECIPE_BY_NUMBER = 'https://master-7rqtwti-yj2le3kr2yhmu.uk-1.platformsh.site/yumazoo/recipes'
+export const GET_RECIPE_BY_NUMBER = 'https://master-7rqtwti-yj2le3kr2yhmu.uk-1.platformsh.site/yumazoo/recipes/number'
 export const GET_RECIPE_BY_INDEX = 'https://master-7rqtwti-yj2le3kr2yhmu.uk-1.platformsh.site/yumazoo/recipes'
 
 export const DIFFICULTY = {
