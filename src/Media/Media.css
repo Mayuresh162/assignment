@@ -1,0 +1,18 @@
+.src-icon {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+
+.url {
+    background-color: #171F2F;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    margin: 0 2px;
+    height: 15px;
+    width: 15px;
+    justify-content: center;
+    padding: 5px;
+}

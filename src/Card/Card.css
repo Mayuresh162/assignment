@@ -1,0 +1,83 @@
+.card {
+    width: 420px;
+    background-color: #0D1119;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 570px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    border-radius: 6px;
+    padding: 10px;
+    align-items: center;
+    background-color: #131823;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 0px 1px #5B6178;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.search > input {
+    background-color: #131823;
+    outline: none;
+    border: none;
+    color: #7185AA;
+    width: 100%;
+    font-size: 16px;
+}
+
+::placeholder { 
+    color: #7185AA;
+    opacity: 1;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.title-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title-content > img {
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.cousine-name {
+    color: #fff;
+    font-size: 14px;
+}
+
+.urls {
+    display: flex;
+    flex-direction: row;
+}
+
+.cousine-details {
+    background-color: #313545;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.ingredient-details {
+    background-color: #313545;
+    border-radius: 6px;
+    padding: 10px 20px;
+}

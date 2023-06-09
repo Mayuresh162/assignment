@@ -1,0 +1,53 @@
+.ingredient {
+    display: flex;
+    justify-content: space-between;
+    height: 210px;
+}
+
+.leftside,
+.rightside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.heading {
+    font-size: 13px;
+    color: #737992;
+    font-family: inherit;
+}
+
+.content {
+    color: #fff;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.oil,
+.authentic,
+.stock,
+.spice2 {
+    background: linear-gradient(to right, #FFBF43, #FF4869);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.spice1,
+.produce1 {
+    background: linear-gradient(to right, #2BF1E5, #40E33D);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.produce2 {
+    background: linear-gradient(to right, #FB2047, #FB2047);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
