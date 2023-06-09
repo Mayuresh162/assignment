@@ -1,19 +1,19 @@
 import Ingredients from '../Ingredients/Ingredients';
 import Media from '../Media/Media';
 import Cousine from '../Cousine/Cousine';
-import { FLAGS, CUISINE_IMG, FULL_RECIPE_URL, GET_RECIPE, DIFFICULTY } from "../utils/config";
+import { FLAGS, CUISINE_IMG, FULL_RECIPE_URL, GET_RECIPE_BY_INDEX, DIFFICULTY } from "../utils/config";
 import React, { useEffect, useState } from 'react'
 
 import './Card.css';
 
 function Card() {
     const [cuisine, setCuisine] = useState();
-    const [searchKeyword, setSearchKeyword] = useState('');
+    const [searchKeyword, setSearchKeyword] = useState(0);
 
     async function loadData() {
         try {
             if (+searchKeyword >= 0 && +searchKeyword <= 2) {
-                const response = await fetch(`${GET_RECIPE}/${+searchKeyword+2}`,
+                const response = await fetch(`${GET_RECIPE_BY_INDEX}/${+searchKeyword+2}`,
                 {
                     headers: {
                         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ function Card() {
         <div className='card'>
             <div className='search'>
                 <img src={require('../assets/Search.png')} alt='' className='icon'/>
-                <input placeholder='Search cuisine' onChange={(e) => setSearchKeyword(e.target.value)} value={searchKeyword}/>
+                <input placeholder='Search cuisine' onChange={(e) => setSearchKeyword(e.target.value)}/>
             </div>
             <div className='header'>
                 <div className='title-content'>
