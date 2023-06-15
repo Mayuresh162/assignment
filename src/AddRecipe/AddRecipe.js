@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { ADD_RECIPE } from '../utils/config';
 import './AddRecipe.css'
 
@@ -18,13 +18,15 @@ function AddRecipe({ setAddRecipe, callback }) {
         authenticity: '',
         stock: ''
     });
+    const formRef = useRef(null);
 
     function inputHandler(key, e) {
         const {value} = e.target;
         setRecipe(prev => ({...prev, [key]: key === 'difficulty' || key === 'serves' || key === 'volume' ? +value : value}));
     }
 
-    async function addRecipeHandler() {
+    async function addRecipeHandler(e) {
+        e.preventDefault();
         const response = await fetch(`${ADD_RECIPE}`,
         {
             headers: {
@@ -37,24 +39,11 @@ function AddRecipe({ setAddRecipe, callback }) {
         });
         const json = await response.json();
         console.log(json);
-        setAddRecipe({
-            name: '',
-            origin: '',
-            description: '',
-            difficulty: 0,
-            protein: '',
-            spice: '',
-            cookingOil: '',
-            volume: 0,
-            produce: '',
-            serves: 0,
-            authenticity: '',
-            stock: ''
-        });
+        formRef.current.reset();
     }
 
     return (
-        <div className='card'>
+        <form className='card' ref={formRef}>
             <div className='add-header' onClick={() => {
                 setAddRecipe(false);
                 callback();
@@ -91,45 +80,45 @@ function AddRecipe({ setAddRecipe, callback }) {
                 </div>
                 <div className='item-holder'>
                     <span className='add-heading'>Protein</span>
-                    <input onChange={(e) => inputHandler('protein', e)} />
+                    <input onChange={(e) => inputHandler('protein', e)} maxLength='15'/>
                 </div>
             </div>
             <div className='content-holder'>
                 <div className='item-holder marginRight'>
                     <span className='add-heading'>Spices</span>
-                    <input onChange={(e) => inputHandler('spice', e)} />
+                    <input onChange={(e) => inputHandler('spice', e)} maxLength='15'/>
                 </div>
                 <div className='item-holder'>
                     <span className='add-heading'>Cooking Oil</span>
-                    <input onChange={(e) => inputHandler('cookingOil', e)} />
+                    <input onChange={(e) => inputHandler('cookingOil', e)} maxLength='15'/>
                 </div>
             </div>
             <div className='content-holder'>
                 <div className='item-holder marginRight'>
                     <span className='add-heading'>Volume/Weight</span>
-                    <input type='number' onChange={(e) => inputHandler('volume', e)} />
+                    <input type='number' onChange={(e) => inputHandler('volume', e)}/>
                 </div>
                 <div className='item-holder'>
                     <span className='add-heading'>Produce</span>
-                    <input onChange={(e) => inputHandler('produce', e)} />
+                    <input onChange={(e) => inputHandler('produce', e)}  maxLength='15'/>
                 </div>
             </div>
             <div className='content-holder'>
                 <div className='item-holder marginRight'>
                     <span className='add-heading'>Serves</span>
-                    <input placeholder='people' type='number' onChange={(e) => inputHandler('serves', e)} />
+                    <input placeholder='people' type='number' onChange={(e) => inputHandler('serves', e)}/>
                 </div>
                 <div className='item-holder'>
                     <span className='add-heading'>Authenticity</span>
-                    <input onChange={(e) => inputHandler('authenticity', e)} />
+                    <input onChange={(e) => inputHandler('authenticity', e)} maxLength='15'/>
                 </div>
             </div>
             <div className='content-holder flexDirection'>
                 <span className='add-heading'>Stock</span>
-                <input className='stock-input' onChange={(e) => inputHandler('stock', e)} />
+                <input className='stock-input' onChange={(e) => inputHandler('stock', e)} maxLength='15'/>
             </div>
-            <button onClick={() => addRecipeHandler()}>Add Recipe</button>
-        </div>
+            <button onClick={(e) => addRecipeHandler(e)}>Add Recipe</button>
+        </form>
     )
 }
 
