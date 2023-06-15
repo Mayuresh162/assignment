@@ -1,0 +1,123 @@
+.card {
+    width: 420px;
+    background-color: #0D1119;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 570px;
+    position: relative;
+}
+
+.add-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back {
+    height: 10px;
+    margin-right: 20px;
+}
+
+.add-title {
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.h-divider {
+    height: 2px;
+    width: auto;
+    background: #2E3347;
+    margin-top: 16px;
+    margin-bottom: 18px;
+    display: flex;
+}
+
+.add-heading {
+    color: #fff;
+    font-size: 12px;
+    font-family: inherit;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.content-holder {
+    display: flex;
+    margin-bottom: 13px;
+    justify-content: space-between;
+}
+
+.flexDirection {
+    flex-direction: column;
+}
+
+.item-holder {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+input {
+    width: 200px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    height: 30px;
+    background-color: #181F30;
+    color: #fff;
+    box-shadow: 0px 0px 0px 1px #5B6178;
+}
+
+.marginRight {
+    margin-right: 12px;
+}
+
+input[type='number']::placeholder {
+    text-align: right;
+    color: #E9EAF6;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #E9EAF6;
+}
+
+.stock-input {
+    width: auto;
+}
+
+textarea {
+    background-color: #181F30;
+    border-radius: 6px;
+    color: #E9EAF6;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 0px 1px #5B6178;
+}
+
+button {
+    background-color: #764AF4;
+    font-family: inherit;
+}
+
+select {
+    background-color: #181F30;
+    color: #E9EAF6;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.4), inset 0px 0px 0px 1px #5B6178;
+    height: 33px;
+    border-radius: 6px;
+    padding: 0 5px;
+}
+
+.character {
+    color: #43495E;
+    font-size: 12px;
+    font-family: inherit;
+    text-align: left;
+    padding-top: 8px;
+}
+

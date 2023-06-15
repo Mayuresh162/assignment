@@ -1,7 +1,7 @@
 .ingredient {
     display: flex;
     justify-content: space-between;
-    height: 210px;
+    height: 202px;
 }
 
 .leftside,

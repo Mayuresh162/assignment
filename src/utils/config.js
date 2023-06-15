@@ -105,12 +105,6 @@ export const FULL_RECIPE_URL = {
     'it': 'https://medium.com/@lilye/the-best-tiramisu-recipe-classic-ad29d8712749',
 }
 
-export const OIL_TYPE = {
-    'sp': 'Oil',
-    'in': 'Butter',
-    'it': 'Cheese',
-}
-
 export const FOOD_TYPE = {
     'sp': 'Seafood',
     'in': 'Street Food',

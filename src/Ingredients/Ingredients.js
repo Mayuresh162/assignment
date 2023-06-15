@@ -8,7 +8,7 @@ function Ingredients({ produce, protein, spice, volume, authenticity, stock, oil
     <div className='ingredient'>
       <div className='leftside'>
         <div className='item'>
-          <span className='heading'>{FOOD_TYPE[origin]}</span>
+          <span className='heading'>{FOOD_TYPE[origin] || 'Food'}</span>
           <span className='content'>{protein}</span>
         </div>
         <div className='item'>
@@ -30,7 +30,7 @@ function Ingredients({ produce, protein, spice, volume, authenticity, stock, oil
           <span className='content'><span className='produce1'>{produce.split(',')[0]}</span><span>{' / '}</span><span className='produce2'>{produce.split(',')[1]}</span></span>
         </div>
         <div className='item'>
-          <span className='heading'>{OIL_TYPE[origin]}</span>
+          <span className='heading'>Oil</span>
           <span className={`content oil`}>{oil}</span>
         </div>
         <div className='item'>
@@ -45,14 +45,5 @@ function Ingredients({ produce, protein, spice, volume, authenticity, stock, oil
     </div>
   )
 }
-
-// "protein": "Savoiardi",
-//   "produce": "Coffee, Eggs",
-//   "spice": "Cocoa",
-//   "cookingOil": "Cheese",
-//   "volume": 600,
-//   "serves": 8,
-//   "authenticity": "Verified",
-//   "stock": "Milk"
 
 export default Ingredients;
